@@ -5,6 +5,10 @@
 
 RoseGarden combines the Underscores theme boiler template with Bootstrap 5 in a small starter theme for great WordPress projects. There are no settings in the customizer, no logo-uploader and no drag'n'drop. RoseGarden is 100% customizable by using the .php, .scss and .js files. Basic coding skills for editing are required.
 
+## Screenshot
+
+![Screenshot](hscreenshot.png)
+
 ## Installation
 
 1. Download latest release [rosegarden-main.zip](https://github.com/eotpcomic/rosegarden/releases).
