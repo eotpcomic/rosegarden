@@ -1,0 +1,59 @@
+/*
+Theme Name: RoseGarden
+Author: RoseGarden
+Description: Base on bootscore
+Requires at least: 5.0
+Tags: featured-images, threaded-comments, translation-ready
+
+RoseGarden is based on Bootscore https://Bootscore.me/, (C) 2012-2022 Automattic, Inc.
+Bootscore is distributed under the terms of the MIT-LICENSE.
+*/
+
+
+.page-header {
+    height: 350px;
+    background-size: cover;
+}
+
+.panel {
+    position: relative;
+  }
+  
+
+  
+.blog-container a:not(.btn) {
+  color: #999;
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+}
+.widget a:not(.btn) {
+  color: #999;
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+}
+  
+
+  
+  .post-like {
+    float: right;
+    cursor: pointer;
+  }
+  
+  .headline {
+    margin: 20px 0;
+    padding: 5px 0 10px;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
+  }
+  
+  h4, .h4 {
+    font-size: 18px;
+  }
+
+  
