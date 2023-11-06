@@ -3,15 +3,12 @@
 ### Wordpress Theme based on [bootscore](https://bootscore.me/) (Bootstrap 5 + WordPress starter theme)
 
 
-bootScore combines the Underscores theme boiler template with Bootstrap 5 in a small starter theme for great WordPress projects. There are no settings in the customizer, no logo-uploader and no drag'n'drop. bootScore is 100% customizable by using the .php, .scss and .js files. Basic coding skills for editing are required.
-
-bootScore comes with seamless Bootstrap integration and full WooCommerce support with an integrated ajax offcanvas cart.
+RoseGarden combines the Underscores theme boiler template with Bootstrap 5 in a small starter theme for great WordPress projects. There are no settings in the customizer, no logo-uploader and no drag'n'drop. RoseGarden is 100% customizable by using the .php, .scss and .js files. Basic coding skills for editing are required.
 
 ## Installation
 
-1. Download latest release [bootscore-main.zip](https://github.com/bootscore/bootscore/releases) or get bootScore through the official [site](https://bootscore.me/#download).
+1. Download latest release [rosegarden-main.zip](https://github.com/eotpcomic/rosegarden/releases).
 2. Upload theme via the WordPress theme-uploader and activate it.
-
 
 ## License & Credits
 
