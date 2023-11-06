@@ -7,7 +7,7 @@ RoseGarden combines the Underscores theme boiler template with Bootstrap 5 in a 
 
 ## Screenshot
 
-![Screenshot](hscreenshot.png)
+![Screenshot](screenshot.png)
 
 ## Installation
 
