@@ -23,11 +23,7 @@ add_action('wp_enqueue_scripts', 'bootscore_reply');
  * Comments
  */
 if (!function_exists('bootscore_comment')) :
-  /**
-   * Template for comments and pingbacks.
-   *
-   * Used as a callback by wp_list_comments() for displaying the comments.
-   */
+
   function bootscore_comment($comment, $args, $depth) {
     // $GLOBALS['comment'] = $comment;
 
@@ -45,11 +41,11 @@ if (!function_exists('bootscore_comment')) :
         <article id="div-comment-<?php comment_ID(); ?>" class="comment-body mb-4 d-flex">
 
           <div class="flex-shrink-0 me-3">
-            <?php if (0 != $args['avatar_size']) echo get_avatar($comment, $args['avatar_size'], '', '', array('class' => 'img-thumbnail rounded-circle')); ?>
+            <?php if (0 != $args['avatar_size']) echo get_avatar($comment, $args['avatar_size'], '', '', array('class' => 'img-thumbnail')); ?>
           </div>
 
           <div class="comment-content">
-            <div class="card">
+            <div class="panal">
               <div class="card-body">
 
                 <div class="mt-0"><?php printf(__('%s <span class="says d-none">says:</span>', 'bootscore'), sprintf('<h3 class="h5">%s</h3>', get_comment_author_link())); ?>

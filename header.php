@@ -21,60 +21,51 @@
 
 <?php wp_body_open(); ?>
 
-<div id="page" class="site">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm" id="mainNav">
+  <div class="container px-4">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+          <?php  wp_nav_menu(array(
+          'theme_location' => 'main-menu',
+          'container'      => false,
+          'menu_class'     => '',
+          'fallback_cb'    => '__return_false',
+          'items_wrap'     => '<ul class="navbar-nav me-auto  %2$s">%3$s</ul>',
+          'depth'          => 2,
+          'walker'         => new bootstrap_5_wp_nav_menu_walker()
+        ));  ?>
+        <div class="nav-search-box justify-content-end"> 
+        <form class="input-group form-inline my-2 my-lg-0" method="get" action="<?php esc_url(home_url('/')); ?>" style="display: flex; " >
+          <input class="form-control mr-sm-2" type="search" name="s"  placeholder="Suche">
+          <button type="submit" class="btn btn-outline-success my-2 my-sm-0"><i class="fa-solid fa-magnifying-glass"></i><span class="visually-hidden-focusable">Search</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Header-->
+<header class="bg-primary bg-gradient text-white">
+  <section>
+    <div id="intro" class="bg-image" style="
+        background-image: url('<?php header_image(); ?>');
+        height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      ">
+      <div class="intro-link px-4" >
+        <a href="<?= esc_url(home_url('/')); ?>"  class="text-decoration-none">
+              <h1 class="text-white text-center"><?php bloginfo('name'); ?></h1>
+              <p class="lead text-white text-center "><?php bloginfo('description'); ?></p>
+          </a>
+      </div>
+    </div>
+  </section>
+</header>
+
+
+ 
     
-
-<!--start-->
-
-
-
-    <header id="masthead" class="site-header">
-    <?php if ( get_header_image() ) : ?>
-      <div class="page-header jumbotron p-3 p-md-5 text-white  text-white jumbotron-image" data-parallax="true" style="background-image: url(<?php header_image(); ?>)">
-            <a href="<?= esc_url(home_url('/')); ?>" class="nav-link">
-              <h1 class="display-4 text-center"><?php bloginfo('name'); ?></h1>
-            </a>
-                <p class="lead my-3 text-center"><?php bloginfo('description'); ?></p>
-      </div>
-    <?php else : ?>
-      <div class="page-header jumbotron p-3 p-md-5 text-white bg-dark>
-            <a href="<?= esc_url(home_url('/')); ?>" class="nav-link">
-              <h1 class="display-4 text-center"><?php bloginfo('name'); ?></h1>
-            </a>
-                <p class="lead my-3 text-center"><?php bloginfo('description'); ?></p>
-      </div>
-    <?php endif ?>
-
-
-        <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <!-- Bootstrap 5 Nav Walker Main Menu -->
-            <?php
-                wp_nav_menu(array(
-                  'theme_location' => 'main-menu',
-                  'container'      => false,
-                  'menu_class'     => '',
-                  'fallback_cb'    => '__return_false',
-                  'items_wrap'     => '<ul id="bootscore-navbar" class="navbar-nav me-auto mb-2 mb-lg-0 %2$s">%3$s</ul>',
-                  'depth'          => 2,
-                  'walker'         => new bootstrap_5_wp_nav_menu_walker()
-                ));
-                ?>
-          </div>
-        </div>
-      </nav>
-
-      
-      <!-- Navbar -->
-      
-    </header>
-
 
 

@@ -40,7 +40,7 @@ if (!function_exists('bootscore_sidebar_col_class')) {
  */
 if (!function_exists('bootscore_sidebar_toggler_class')) {
   function bootscore_sidebar_toggler_class() {
-    return "d-md-none btn btn-outline-primary w-100 mb-4 d-flex justify-content-between align-items-center";
+    return "d-md-none btn btn-light w-100 mb-4 d-flex justify-content-between align-items-center";
   }
 }
 

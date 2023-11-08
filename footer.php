@@ -1,6 +1,6 @@
 <footer>
 
-  <div class="bootscore-footer bg-body-tertiary pt-5 pb-3">
+  <div class="bootscore-footer bg-body-tertiary pt-5 pb-5 bg-light ">
     <div class="<?= bootscore_container_class(); ?>">
 
       <!-- Top Footer Widget -->
@@ -66,11 +66,6 @@
   </div>
 
 </footer>
-
-<!-- To top button -->
-<a href="#" class="btn btn-primary shadow top-button position-fixed zi-1020"><i class="fa-solid fa-chevron-up"></i><span class="visually-hidden-focusable">To top</span></a>
-
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 

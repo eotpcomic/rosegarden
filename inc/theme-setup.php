@@ -75,3 +75,10 @@ function bootscore_content_width() {
 }
 
 add_action('after_setup_theme', 'bootscore_content_width', 0);
+
+add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
+
+$args = array(
+	'default-color' => 'ffffff',
+);
+add_theme_support( 'custom-background', $args );

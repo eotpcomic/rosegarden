@@ -1,55 +1,77 @@
+<?php
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+/**
+ * The template for displaying search results pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ *
+ * @package Bootscore
+ */
 
-  <div class="card horizontal mb-4">
-    <div class="row g-0">
+get_header();
+?>
+  <div id="content" class="site-content <?= bootscore_container_class(); ?> py-5 mt-5">
+    <div id="primary" class="content-area">
 
-      <?php if (has_post_thumbnail()) : ?>
-        <div class="col-lg-6 col-xl-5 col-xxl-4">
-          <a href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail('medium', array('class' => 'card-img-lg-start')); ?>
-          </a>
-        </div>
-      <?php endif; ?>
+      <!-- Hook to add something nice -->
+      <?php bs_after_primary(); ?>
 
-      <div class="col">
-        <div class="card-body">
+      <div class="row">
+        <div class="<?= bootscore_main_col_class(); ?>">
 
-          <?php bootscore_category_badge(); ?>
+          <main id="main" class="site-main">
 
-          <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
-            <?php the_title('<h2 class="blog-post-title h5">', '</h2>'); ?>
-          </a>
+            <?php if (have_posts()) : ?>
 
-          <?php if ('post' === get_post_type()) : ?>
-            <p class="meta small mb-2 text-body-tertiary">
+              <header class="page-header mb-4">
+                <h1>
+                  <?php
+                  /* translators: %s: search query. */
+                  printf(esc_html__('Search Results for: %s', 'bootscore'), '<span class="text-secondary">' . get_search_query() . '</span>');
+                  ?>
+                </h1>
+              </header>
+
               <?php
-              bootscore_date();
-              bootscore_author();
-              bootscore_comments();
-              bootscore_edit();
-              ?>
-            </p>
-          <?php endif; ?>
+              /* Start the Loop */
+              while (have_posts()) :
+                the_post(); ?>
 
-          <p class="card-text">
-            <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
-              <?php echo strip_tags(get_the_excerpt()); ?>
-            </a>
-          </p>
+                <!-- start post <?php the_ID(); ?> -->
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                  <div class="col">
+                    <div class="card mt-5">
+                      <div class="card-body">
+                      <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
+                <?php the_title('<h2 class="blog-post-title">', '</h2>'); ?>
+              </a>
+              <small class="meta small mb-2 text-body-tertiary ">
+                  <?php bootscore_date(); bootscore_author(); ?>
+              </small>
+              <p class="card-text mt-4"><?= strip_tags(get_the_excerpt()); ?></p>
+              <a href="<?php the_permalink(); ?>" class="btn btn-light"> <?php _e('Read more »', 'bootscore'); ?> </a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <!-- end post <?php the_ID(); ?> -->
 
-          <p class="card-text">
-            <a class="read-more" href="<?php the_permalink(); ?>">
-              <?php _e('Read more »', 'bootscore'); ?>
-            </a>
-          </p>
+              <?php endwhile;
 
-          <?php bootscore_tags(); ?>
+              bootscore_pagination();
+             
 
-        </div>
-      </div>
-    </div>
-  </div>
+            else : ?>
+              <p class="alert alert-info mb-4"><?php esc_html_e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'bootscore'); ?></p>
+            <?php  endif; ?>
 
-</article>
-<!-- #post-<?php the_ID(); ?> -->
+          </main><!-- #main -->
+
+        </div><!-- col -->
+        <?php get_sidebar(); ?>
+      </div><!-- row -->
+
+    </div><!-- #primary -->
+  </div><!-- #content -->
+<?php
+get_footer();
