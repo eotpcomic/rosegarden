@@ -41,6 +41,11 @@ if (!function_exists('rosegarden_setup')) :
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
     */
     add_theme_support('post-thumbnails');
+    set_post_thumbnail_size( 150, 150, true ); // default Featured Image dimensions (cropped)
+
+    // additional image sizes
+    // delete the next line if you do not need additional image sizes
+    add_image_size( 'category-thumb', 1200, 350 ); // 300 pixels wide (and unlimited height)
 
     /*
      * Switch default core markup for search form, comment form, and comments
