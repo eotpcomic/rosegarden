@@ -8,8 +8,8 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Category Badge
  */
-if (!function_exists('bootscore_category_badge')) :
-  function bootscore_category_badge() {
+if (!function_exists('rosegarden_category_badge')) :
+  function rosegarden_category_badge() {
     // Hide category and tag text for pages.
     if ('post' === get_post_type()) {
       echo '<p class="category-badge">';
@@ -30,12 +30,12 @@ endif;
 /**
  * Category
  */
-if (!function_exists('bootscore_category')) :
-  function bootscore_category() {
+if (!function_exists('rosegarden_category')) :
+  function rosegarden_category() {
     // Hide category and tag text for pages.
     if ('post' === get_post_type()) {
       /* translators: used between list items, there is a space after the comma */
-      $categories_list = get_the_category_list(esc_html__(', ', 'bootscore'));
+      $categories_list = get_the_category_list(esc_html__(', ', 'rosegarden'));
       if ($categories_list) {
         /* translators: 1: list of categories. */
         printf('<span class="cat-links">%s</span>', $categories_list); // WPCS: XSS OK.	
@@ -48,11 +48,11 @@ endif;
 /**
  * Date
  */
-if (!function_exists('bootscore_date')) :
+if (!function_exists('')) :
   /**
    * Prints HTML with meta information for the current post-date/time.
    */
-  function bootscore_date() {
+  function rosegarden_date() {
     $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
     if (get_the_time('U') !== get_the_modified_time('U')) {
       $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <span class="time-updated-separator">/</span> <time class="updated" datetime="%3$s">%4$s</time>';
@@ -81,11 +81,11 @@ endif;
 /**
  * Author
  */
-if (!function_exists('bootscore_author')) :
+if (!function_exists('rosegarden_author')) :
 
-  function bootscore_author() {
+  function rosegarden_author() {
     $byline = sprintf(
-      esc_html_x('by %s', 'post author', 'bootscore'),
+      esc_html_x('by %s', 'post author', 'rosegarden'),
       '<a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a>'
     );
 
@@ -98,11 +98,11 @@ endif;
 /**
  * Comments
  */
-if (!function_exists('bootscore_comments')) :
+if (!function_exists('rosegarden_comments')) :
   /**
    * Prints HTML with meta information for the categories, tags and comments.
    */
-  function bootscore_comments() {
+  function rosegarden_comments() {
 
     if (!is_single() && !post_password_required() && (comments_open() || get_comments_number())) {
       echo ' <span class="comment-divider">|</span> <i class="fa-regular fa-comments"></i> <span class="comments-link">';
@@ -110,7 +110,7 @@ if (!function_exists('bootscore_comments')) :
         sprintf(
           wp_kses(
           /* translators: %s: post title */
-            __('Leave a Comment', 'bootscore'),
+            __('Leave a Comment', 'rosegarden'),
             array(
               'span' => array(
                 'class' => array(),
@@ -129,17 +129,17 @@ endif;
 /**
  * Edit link
  */
-if (!function_exists('bootscore_edit')) :
+if (!function_exists('rosegarden_edit')) :
   /**
    * Prints HTML with the edit link for the current post.
    */
-  function bootscore_edit() {
+  function rosegarden_edit() {
 
     edit_post_link(
       sprintf(
         wp_kses(
         /* translators: %s: Name of current post. Only visible to screen readers */
-          __('Edit', 'bootscore'),
+          __('Edit', 'rosegarden'),
           array(
             'span' => array(
               'class' => array(),
@@ -158,17 +158,17 @@ endif;
 /**
  * Single comments count
  */
-if (!function_exists('bootscore_comment_count')) :
+if (!function_exists('rosegarden_comment_count')) :
   /**
    * Prints HTML with the comment count for the current post.
    */
-  function bootscore_comment_count() {
+  function rosegarden_comment_count() {
     if (!post_password_required() && (comments_open() || get_comments_number())) {
       echo ' <span class="comment-divider">|</span> <i class="fa-regular fa-comments"></i> <span class="comments-link">';
 
       /* translators: %s: Name of current post. Only visible to screen readers. */
-      // comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'bootscore' ), get_the_title() ) );
-      comments_popup_link(sprintf(__('Leave a comment', 'bootscore'), get_the_title()));
+      // comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'rosegarden' ), get_the_title() ) );
+      comments_popup_link(sprintf(__('Leave a comment', 'rosegarden'), get_the_title()));
 
 
       echo '</span>';
@@ -180,11 +180,11 @@ endif;
 /**
  * Tags
  */
-if (!function_exists('bootscore_tags')) :
+if (!function_exists('rosegarden_tags')) :
   /**
    * Prints HTML with meta information for the categories, tags and comments.
    */
-  function bootscore_tags() {
+  function rosegarden_tags() {
     // Hide category and tag text for pages.
     if ('post' === get_post_type()) {
 
@@ -194,7 +194,7 @@ if (!function_exists('bootscore_tags')) :
       if ($tags_list) {
         /* translators: 1: list of tags. */
         echo '<div class="tags-links">';
-        echo '<p class="tags-heading mb-2">' . esc_html__('Tagged', 'bootscore') . '</p>';
+        echo '<p class="tags-heading mb-2">' . esc_html__('Tagged', 'rosegarden') . '</p>';
         echo get_the_tag_list();
         echo '</div>';
       }
@@ -212,14 +212,14 @@ endif;
 /**
  * Featured image
  */
-if (!function_exists('bootscore_post_thumbnail')) :
+if (!function_exists('rosegarden_post_thumbnail')) :
   /**
    * Displays an optional post thumbnail.
    *
    * Wraps the post thumbnail in an anchor element on index views, or a div
    * element when on single views.
    */
-  function bootscore_post_thumbnail() {
+  function rosegarden_post_thumbnail() {
     if (post_password_required() || is_attachment() || !has_post_thumbnail()) {
       return;
     }

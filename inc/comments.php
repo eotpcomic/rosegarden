@@ -9,29 +9,29 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Comment reply
  */
-function bootscore_reply() {
+function rosegarden_reply() {
 
   if (is_singular() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
   }
 }
 
-add_action('wp_enqueue_scripts', 'bootscore_reply');
+add_action('wp_enqueue_scripts', 'rosegarden_reply');
 
 
 /**
  * Comments
  */
-if (!function_exists('bootscore_comment')) :
+if (!function_exists('rosegarden_comment')) :
 
-  function bootscore_comment($comment, $args, $depth) {
+  function rosegarden_comment($comment, $args, $depth) {
     // $GLOBALS['comment'] = $comment;
 
     if ('pingback' == $comment->comment_type || 'trackback' == $comment->comment_type) : ?>
 
       <li id="comment-<?php comment_ID(); ?>" <?php comment_class('media alert alert-info'); ?>>
       <div class="comment-body">
-        <?php _e('Pingback:', 'bootscore'); ?><?php comment_author_link(); ?><?php edit_comment_link(__('Edit', 'bootscore'), '<span class="edit-link">', '</span>'); ?>
+        <?php _e('Pingback:', 'rosegarden'); ?><?php comment_author_link(); ?><?php edit_comment_link(__('Edit', 'rosegarden'), '<span class="edit-link">', '</span>'); ?>
       </div>
 
     <?php else : ?>
@@ -48,19 +48,19 @@ if (!function_exists('bootscore_comment')) :
             <div class="panal">
               <div class="card-body">
 
-                <div class="mt-0"><?php printf(__('%s <span class="says d-none">says:</span>', 'bootscore'), sprintf('<h3 class="h5">%s</h3>', get_comment_author_link())); ?>
+                <div class="mt-0"><?php printf(__('%s <span class="says d-none">says:</span>', 'rosegarden'), sprintf('<h3 class="h5">%s</h3>', get_comment_author_link())); ?>
                 </div>
 
                 <p class="small comment-meta text-secondary">
                   <time datetime="<?php comment_time('c'); ?>">
-                    <?php printf(_x('%1$s at %2$s', '1: date, 2: time', 'bootscore'), get_comment_date(), get_comment_time()); ?>
+                    <?php printf(_x('%1$s at %2$s', '1: date, 2: time', 'rosegarden'), get_comment_date(), get_comment_time()); ?>
                   </time>
-                  <?php edit_comment_link(__('Edit', 'bootscore'), '<span class="edit-link">', '</span>'); ?>
+                  <?php edit_comment_link(__('Edit', 'rosegarden'), '<span class="edit-link">', '</span>'); ?>
                 </p>
 
 
                 <?php if ('0' == $comment->comment_approved) : ?>
-                  <p class="comment-awaiting-moderation alert alert-info"><?php _e('Your comment is awaiting moderation.', 'bootscore'); ?></p>
+                  <p class="comment-awaiting-moderation alert alert-info"><?php _e('Your comment is awaiting moderation.', 'rosegarden'); ?></p>
                 <?php endif; ?>
 
                 <?php comment_text(); ?>
@@ -109,7 +109,7 @@ function wp44138_change_comment_form_cookies_consent($fields) {
   $consent           = empty($commenter['comment_author_email']) ? '' : ' checked="checked"';
   $fields['cookies'] = '<p class="comment-form-cookies-consent custom-control form-check mb-3">' .
                        '<input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" class="form-check-input"' . $consent . ' />' .
-                       '<label for="wp-comment-cookies-consent" class="form-check-label">' . __('Save my name, email, and website in this browser for the next time I comment.', 'bootscore') . '</label>' .
+                       '<label for="wp-comment-cookies-consent" class="form-check-label">' . __('Save my name, email, and website in this browser for the next time I comment.', 'rosegarden') . '</label>' .
                        '</p>';
 
   return $fields;
@@ -142,12 +142,12 @@ endif;
 /**
  * Comment Button
  */
-if (!function_exists('bootscore_comment_button')) :
-  function bootscore_comment_button($args) {
+if (!function_exists('rosegarden_comment_button')) :
+  function rosegarden_comment_button($args) {
     $args['class_submit'] = 'btn btn-outline-primary'; // since WP 4.1
 
     return $args;
   }
 
-  add_filter('comment_form_defaults', 'bootscore_comment_button');
+  add_filter('comment_form_defaults', 'rosegarden_comment_button');
 endif;

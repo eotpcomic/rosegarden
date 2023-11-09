@@ -69,7 +69,7 @@ msgstr "404 oldal"
 #. Description of the theme
 msgid ""
 "A powerful Bootstrap 5 WordPress Starter Theme with WooCommerce Support. <a "
-"href=\"https://bootscore.me/category/documentation/\">Documentation</a>. "
+"href=\"https://rosegarden.me/category/documentation/\">Documentation</a>. "
 "This theme gives you full control whatever you do and the full freedom to "
 "design whatever you want. It comes with a wide selection of category, page, "
 "post, author and archive templates as well as sidebar, header, footer and "

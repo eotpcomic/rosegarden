@@ -1,18 +1,18 @@
 /*
 Theme Name: RoseGarden
 Author: RoseGarden
-Description: Base on bootscore
+Description: Base on rosegarden
 Requires at least: 5.0
 Tags: featured-images, threaded-comments, translation-ready
 
-RoseGarden is based on Bootscore https://Bootscore.me/, (C) 2012-2022 Automattic, Inc.
-Bootscore is distributed under the terms of the MIT-LICENSE.
+RoseGarden is based on rosegarden https://rosegarden.me/, (C) 2012-2022 Automattic, Inc.
+rosegarden is distributed under the terms of the MIT-LICENSE.
 */
 
 
   
   
-.bootscore-footer {
+.rosegarden-footer {
   margin-top: 80px;
   padding: 48px clamp(16px,5.55vw,80px);
   border-bottom: 1px solid #eee;

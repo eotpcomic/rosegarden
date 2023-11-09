@@ -5,19 +5,19 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package Bootscore
+ * @package rosegarden
  */
 
 get_header();
 ?>
-  <div id="content" class="site-content <?= bootscore_container_class(); ?> py-5 mt-5">
+  <div id="content" class="site-content <?= rosegarden_container_class(); ?> py-5 mt-5">
     <div id="primary" class="content-area">
 
       <!-- Hook to add something nice -->
       <?php bs_after_primary(); ?>
 
       <div class="row">
-        <div class="<?= bootscore_main_col_class(); ?>">
+        <div class="<?= rosegarden_main_col_class(); ?>">
 
           <main id="main" class="site-main">
 
@@ -27,7 +27,7 @@ get_header();
                 <h1>
                   <?php
                   /* translators: %s: search query. */
-                  printf(esc_html__('Search Results for: %s', 'bootscore'), '<span class="text-secondary">' . get_search_query() . '</span>');
+                  printf(esc_html__('Search Results for: %s', 'rosegarden'), '<span class="text-secondary">' . get_search_query() . '</span>');
                   ?>
                 </h1>
               </header>
@@ -46,10 +46,10 @@ get_header();
                 <?php the_title('<h2 class="blog-post-title">', '</h2>'); ?>
               </a>
               <small class="meta small mb-2 text-body-tertiary ">
-                  <?php bootscore_date(); bootscore_author(); ?>
+                  <?php rosegarden_date(); rosegarden_author(); ?>
               </small>
               <p class="card-text mt-4"><?= strip_tags(get_the_excerpt()); ?></p>
-              <a href="<?php the_permalink(); ?>" class="btn btn-light"> <?php _e('Read more »', 'bootscore'); ?> </a>
+              <a href="<?php the_permalink(); ?>" class="btn btn-light"> <?php _e('Read more »', 'rosegarden'); ?> </a>
                       </div>
                     </div>
                   </div>
@@ -58,11 +58,11 @@ get_header();
 
               <?php endwhile;
 
-              bootscore_pagination();
+              rosegarden_pagination();
              
 
             else : ?>
-              <p class="alert alert-info mb-4"><?php esc_html_e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'bootscore'); ?></p>
+              <p class="alert alert-info mb-4"><?php esc_html_e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'rosegarden'); ?></p>
             <?php  endif; ?>
 
           </main><!-- #main -->

@@ -24,14 +24,12 @@ require_once('inc/password-protected-form.php'); // Form if post or page is prot
 require_once('inc/template-tags.php');           // Meta information like author, date, comments, category and tags badges
 require_once('inc/template-functions.php');      // Functions which enhance the theme by hooking into WordPress
 require_once('inc/widgets.php');                 // Register widget area and disables Gutenberg in widgets
-require_once('inc/deprecated.php');              // Fallback functions being dropped in v6
-
 
 
 /**
  * Load Bootstrap 5 Nav Walker and registers menus 
  * Remove this snippet in v6 and add nav-walker to the enqueue list
- * https://github.com/orgs/bootscore/discussions/347
+ * https://github.com/orgs/rosegarden/discussions/347
  */
 if (!function_exists('register_navwalker')) :
   function register_navwalker() {

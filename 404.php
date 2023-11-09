@@ -2,7 +2,7 @@
 
 get_header();
 ?>
-  <div id="content" class="site-content <?= bootscore_container_class(); ?> py-5 mt-5">
+  <div id="content" class="site-content <?= rosegarden_container_class(); ?> py-5 mt-5">
     <div id="primary" class="content-area">
 
       <main id="main" class="site-main">
@@ -12,12 +12,12 @@ get_header();
 
             <h1 class="mb-3">404</h1>
             <!-- Remove this line and place some widgets -->
-            <p class="alert alert-info mb-4"><?php esc_html_e('Page not found.', 'bootscore'); ?></p>
+            <p class="alert alert-info mb-4"><?php esc_html_e('Page not found.', 'rosegarden'); ?></p>
             <!-- 404 Widget -->
             <?php if (is_active_sidebar('404-page')) : ?>
               <div><?php dynamic_sidebar('404-page'); ?></div>
             <?php endif; ?>
-            <a class="btn btn-outline-primary" href="<?= esc_url(home_url()); ?>" role="button"><?php esc_html_e('Back Home &raquo;', 'bootscore'); ?></a>
+            <a class="btn btn-light" href="<?= esc_url(home_url()); ?>" role="button"><?php esc_html_e('Back Home &raquo;', 'rosegarden'); ?></a>
           </div>
         </section><!-- .error-404 -->
 

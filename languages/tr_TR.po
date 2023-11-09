@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Bootscore theme TR translation, 2.0\n"
+"Project-Id-Version: rosegarden theme TR translation, 2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2023-05-03 08:27+0000\n"
 "PO-Revision-Date: 2023-06-13 21:20+0300\n"
@@ -63,7 +63,7 @@ msgstr "404 Sayfası"
 #. Description of the theme
 msgid ""
 "A powerful Bootstrap 5 WordPress Starter Theme with WooCommerce Support. <a "
-"href=\"https://bootscore.me/category/documentation/\">Documentation</a>. "
+"href=\"https://rosegarden.me/category/documentation/\">Documentation</a>. "
 "This theme gives you full control whatever you do and the full freedom to "
 "design whatever you want. It comes with a wide selection of category, page, "
 "post, author and archive templates as well as sidebar, header, footer and "
@@ -72,7 +72,7 @@ msgid ""
 "required to customize it."
 msgstr ""
 "WooCommerce Desteği ile güçlü bir Bootstrap 5 WordPress Başlangıç Teması. <a "
-"href=\"https://bootscore.me/category/documentation/\">Belgeler</a>. Bu tema "
+"href=\"https://rosegarden.me/category/documentation/\">Belgeler</a>. Bu tema "
 "size ne yaparsanız yapın tam kontrol ve istediğinizi tasarlamak için tam "
 "özgürlük verir. Çok çeşitli kategori, sayfa, gönderi, yazar ve arşiv "
 "şablonlarının yanı sıra kenar çubuğu, üstbilgi, altbilgi ve 404 widget'ları "
@@ -124,8 +124,8 @@ msgstr ""
 
 #. Name of the theme
 #. Author of the theme
-msgid "bootScore"
-msgstr "bootScore"
+msgid "rosegarden"
+msgstr "rosegarden"
 
 #: comments.php:104
 msgid "Cancel"
@@ -233,12 +233,12 @@ msgstr ""
 "yönetebilir, şifrenizi ve hesap ayrıntılarınızı düzenleyebilirsiniz."
 
 #. Author URI of the theme
-msgid "https://bootscore.me"
-msgstr "https://bootscore.me"
+msgid "https://rosegarden.me"
+msgstr "https://rosegarden.me"
 
 #. URI of the theme
-msgid "https://bootscore.me/"
-msgstr "https://bootscore.me/"
+msgid "https://rosegarden.me/"
+msgstr "https://rosegarden.me/"
 
 #: functions.php:286
 msgid "Internet Explorer detected"

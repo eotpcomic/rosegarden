@@ -48,7 +48,7 @@ msgstr "Errore 404"
 #. Description of the theme
 msgid ""
 "A powerful Bootstrap 5 WordPress Starter Theme with WooCommerce Support. <a "
-"href=\"https://bootscore.me/category/documentation/\">Documentation</a>. "
+"href=\"https://rosegarden.me/category/documentation/\">Documentation</a>. "
 "This theme gives you full control whatever you do and the full freedom to "
 "design whatever you want. It comes with a wide selection of category, page, "
 "post, author and archive templates as well as sidebar, header, footer and "
@@ -57,8 +57,8 @@ msgid ""
 "required to customize it."
 msgstr ""
 "Un potente Bootstrap Starter Onepage o Multi-Page Theme con supporto "
-"WooCommerce. Esempi: https://bootscore.me/#examples, Documentazione: https:"
-"//bootscore.me/category/documentation/. Questo tema ti offre il controllo "
+"WooCommerce. Esempi: https://rosegarden.me/#examples, Documentazione: https:"
+"//rosegarden.me/category/documentation/. Questo tema ti offre il controllo "
 "completo su tutto quello che fai e la libert&agrave; di modificare il layout "
 "a tuo piacimento. Comprende una serie di script utili per le testate e "
 "un&rsquo;ampia selezione di template per le categorie, le pagine, gli "
@@ -68,7 +68,7 @@ msgstr ""
 "personalizzazione minori. Le modifiche pi&ugrave; importanti possono essere "
 "fatte manipolando il codice. Per una completa personalizzazione sono "
 "richieste competenze di CSS, HTML, PHP e JS. Ottieni la tua copia di "
-"bootScore!"
+"rosegarden!"
 
 #: languages/plugin-translations.php:7
 msgid "Accept"
@@ -101,8 +101,8 @@ msgid "Blank without container"
 msgstr "Vuoto senza container"
 
 #. Name of the theme
-msgid "bootScore 5"
-msgstr "bootScore 5"
+msgid "rosegarden 5"
+msgstr "rosegarden 5"
 
 #: comments.php:100
 msgid "Cancel"
@@ -211,8 +211,8 @@ msgstr ""
 "accuont."
 
 #. URI of the theme
-msgid "https://bootscore.me/"
-msgstr "https://bootscore.me/"
+msgid "https://rosegarden.me/"
+msgstr "https://rosegarden.me/"
 
 #. Author URI of the theme
 msgid "https://crftwrk.de"

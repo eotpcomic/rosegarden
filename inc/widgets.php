@@ -18,15 +18,15 @@ add_filter( 'use_widgets_block_editor', '__return_false' );
 /**
  * Register widgets
  */
-if (!function_exists('bootscore_widgets_init')) :
+if (!function_exists('rosegarden_widgets_init')) :
 
-  function bootscore_widgets_init() {
+  function rosegarden_widgets_init() {
 
     // Top Nav
     register_sidebar(array(
-      'name'          => esc_html__('Top Nav', 'bootscore'),
+      'name'          => esc_html__('Top Nav', 'rosegarden'),
       'id'            => 'top-nav',
-      'description'   => esc_html__('Add widgets here.', 'bootscore'),
+      'description'   => esc_html__('Add widgets here.', 'rosegarden'),
       'before_widget' => '<div class="top-nav-widget ms-1 ms-md-2">',
       'after_widget'  => '</div>',
       'before_title'  => '<div class=" d-none">',
@@ -36,9 +36,9 @@ if (!function_exists('bootscore_widgets_init')) :
     // Top Nav 2
     // Adds a widget next to the Top Nav position but moves to offcanvas on <lg breakpoint
     register_sidebar(array(
-      'name'          => esc_html__('Top Nav 2', 'bootscore'),
+      'name'          => esc_html__('Top Nav 2', 'rosegarden'),
       'id'            => 'top-nav-2',
-      'description'   => esc_html__('Add widgets here.', 'bootscore'),
+      'description'   => esc_html__('Add widgets here.', 'rosegarden'),
       'before_widget' => '<div class="top-nav-widget-2 d-lg-flex align-items-lg-center mt-2 mt-lg-0 ms-lg-2">',
       'after_widget'  => '</div>',
       'before_title'  => '<div class=" d-none">',
@@ -47,9 +47,9 @@ if (!function_exists('bootscore_widgets_init')) :
 
     // Top Nav Search
     register_sidebar(array(
-      'name'          => esc_html__('Top Nav Search', 'bootscore'),
+      'name'          => esc_html__('Top Nav Search', 'rosegarden'),
       'id'            => 'top-nav-search',
-      'description'   => esc_html__('Add widgets here.', 'bootscore'),
+      'description'   => esc_html__('Add widgets here.', 'rosegarden'),
       'before_widget' => '<div class="top-nav-search">',
       'after_widget'  => '</div>',
       'before_title'  => '<div class=" d-none">',
@@ -58,9 +58,9 @@ if (!function_exists('bootscore_widgets_init')) :
 
     // Sidebar
     register_sidebar(array(
-      'name'          => esc_html__('Sidebar', 'bootscore'),
+      'name'          => esc_html__('Sidebar', 'rosegarden'),
       'id'            => 'sidebar-1',
-      'description'   => esc_html__('Add widgets here.', 'bootscore'),
+      'description'   => esc_html__('Add widgets here.', 'rosegarden'),
       'before_widget' => '<section id="%1$s" class="widget %2$s card card-body mb-4 border-0">',
       'after_widget'  => '</section>',
       'before_title'  => '<h5 class="widget-header">',
@@ -69,9 +69,9 @@ if (!function_exists('bootscore_widgets_init')) :
 
     // Top Footer
     register_sidebar(array(
-      'name'          => esc_html__('Top Footer', 'bootscore'),
+      'name'          => esc_html__('Top Footer', 'rosegarden'),
       'id'            => 'top-footer',
-      'description'   => esc_html__('Add widgets here.', 'bootscore'),
+      'description'   => esc_html__('Add widgets here.', 'rosegarden'),
       'before_widget' => '<div class="footer_widget mb-5">',
       'after_widget'  => '</div>',
       'before_title'  => '<h2 class="">',
@@ -80,9 +80,9 @@ if (!function_exists('bootscore_widgets_init')) :
 
     // Footer 1
     register_sidebar(array(
-      'name'          => esc_html__('Footer 1', 'bootscore'),
+      'name'          => esc_html__('Footer 1', 'rosegarden'),
       'id'            => 'footer-1',
-      'description'   => esc_html__('Add widgets here.', 'bootscore'),
+      'description'   => esc_html__('Add widgets here.', 'rosegarden'),
       'before_widget' => '<div class="footer_widget mb-4">',
       'after_widget'  => '</div>',
       'before_title'  => '<h5>',
@@ -91,9 +91,9 @@ if (!function_exists('bootscore_widgets_init')) :
 
     // Footer 2
     register_sidebar(array(
-      'name'          => esc_html__('Footer 2', 'bootscore'),
+      'name'          => esc_html__('Footer 2', 'rosegarden'),
       'id'            => 'footer-2',
-      'description'   => esc_html__('Add widgets here.', 'bootscore'),
+      'description'   => esc_html__('Add widgets here.', 'rosegarden'),
       'before_widget' => '<div class="footer_widget mb-4">',
       'after_widget'  => '</div>',
       'before_title'  => '<h5>',
@@ -102,9 +102,9 @@ if (!function_exists('bootscore_widgets_init')) :
 
     // Footer 3
     register_sidebar(array(
-      'name'          => esc_html__('Footer 3', 'bootscore'),
+      'name'          => esc_html__('Footer 3', 'rosegarden'),
       'id'            => 'footer-3',
-      'description'   => esc_html__('Add widgets here.', 'bootscore'),
+      'description'   => esc_html__('Add widgets here.', 'rosegarden'),
       'before_widget' => '<div class="footer_widget mb-4">',
       'after_widget'  => '</div>',
       'before_title'  => '<h5>',
@@ -113,9 +113,9 @@ if (!function_exists('bootscore_widgets_init')) :
 
     // Footer 4
     register_sidebar(array(
-      'name'          => esc_html__('Footer 4', 'bootscore'),
+      'name'          => esc_html__('Footer 4', 'rosegarden'),
       'id'            => 'footer-4',
-      'description'   => esc_html__('Add widgets here.', 'bootscore'),
+      'description'   => esc_html__('Add widgets here.', 'rosegarden'),
       'before_widget' => '<div class="footer_widget mb-4">',
       'after_widget'  => '</div>',
       'before_title'  => '<h5>',
@@ -124,9 +124,9 @@ if (!function_exists('bootscore_widgets_init')) :
 
     // Footer Info
     register_sidebar(array(
-      'name'          => esc_html__('Footer Info', 'bootscore'),
+      'name'          => esc_html__('Footer Info', 'rosegarden'),
       'id'            => 'footer-info',
-      'description'   => esc_html__('Add widgets here.', 'bootscore'),
+      'description'   => esc_html__('Add widgets here.', 'rosegarden'),
       'before_widget' => '<div class="footer_widget">',
       'after_widget'  => '</div>',
       'before_title'  => '<div class=" d-none">',
@@ -135,9 +135,9 @@ if (!function_exists('bootscore_widgets_init')) :
 
     // 404 Page
     register_sidebar(array(
-      'name'          => esc_html__('404 Page', 'bootscore'),
+      'name'          => esc_html__('404 Page', 'rosegarden'),
       'id'            => '404-page',
-      'description'   => esc_html__('Add widgets here.', 'bootscore'),
+      'description'   => esc_html__('Add widgets here.', 'rosegarden'),
       'before_widget' => '<div class="mb-4">',
       'after_widget'  => '</div>',
       'before_title'  => '<h1 class="">',
@@ -146,7 +146,7 @@ if (!function_exists('bootscore_widgets_init')) :
 
   }
 
-  add_action('widgets_init', 'bootscore_widgets_init');
+  add_action('widgets_init', 'rosegarden_widgets_init');
 
 endif;
 

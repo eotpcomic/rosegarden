@@ -48,7 +48,7 @@ msgstr "Página 404"
 #. Description of the theme
 msgid ""
 "A powerful Bootstrap 5 WordPress Starter Theme with WooCommerce Support. <a "
-"href=\"https://bootscore.me/category/documentation/\">Documentation</a>. "
+"href=\"https://rosegarden.me/category/documentation/\">Documentation</a>. "
 "This theme gives you full control whatever you do and the full freedom to "
 "design whatever you want. It comes with a wide selection of category, page, "
 "post, author and archive templates as well as sidebar, header, footer and "
@@ -57,8 +57,8 @@ msgid ""
 "required to customize it."
 msgstr ""
 "Un poderoso tema de inicio basado en Bootstrap para una página o multipágina "
-"con soporte para WooCommerce. Ejemplos: https://bootscore.me/#examples, "
-"Documentación: https://bootscore.me/category/documentation/. Este tema te da "
+"con soporte para WooCommerce. Ejemplos: https://rosegarden.me/#examples, "
+"Documentación: https://rosegarden.me/category/documentation/. Este tema te da "
 "el control total de todo lo que haces y la libertad total para diseñar lo "
 "que quieras. Viene con algunos scripts de encabezado útiles y una amplia "
 "selección de plantillas de categoría, página, publicación, autor y archivo, "
@@ -66,7 +66,7 @@ msgstr ""
 "incluye un precargador. Hay tan solo unas pocas configuraciones de "
 "personalización en el backend. Todos los ajustes importantes sólo se pueden "
 "realizar tocando el código. Se requieren algunas habilidades de CSS, HTML, "
-"PHP y JS para personalizarlo por completo. ¡Haz que bootScore sea tuyo!"
+"PHP y JS para personalizarlo por completo. ¡Haz que rosegarden sea tuyo!"
 
 #: languages/plugin-translations.php:7
 msgid "Accept"
@@ -99,8 +99,8 @@ msgid "Blank without container"
 msgstr "En blanco sin contenedor"
 
 #. Name of the theme
-msgid "bootScore 5"
-msgstr "bootScore 5"
+msgid "rosegarden 5"
+msgstr "rosegarden 5"
 
 #: comments.php:100
 msgid "Cancel"
@@ -208,8 +208,8 @@ msgstr ""
 "y facturación, y editar tu contraseña y los detalles de tu cuenta."
 
 #. URI of the theme
-msgid "https://bootscore.me/"
-msgstr "https://bootscore.me/"
+msgid "https://rosegarden.me/"
+msgstr "https://rosegarden.me/"
 
 #. Author URI of the theme
 msgid "https://crftwrk.de"

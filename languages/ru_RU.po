@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: bootScore\n"
+"Project-Id-Version: rosegarden\n"
 "POT-Creation-Date: 2023-03-05 03:41+0300\n"
 "PO-Revision-Date: 2023-03-05 03:42+0300\n"
 "Last-Translator: \n"
@@ -969,17 +969,17 @@ msgstr "Оформить заказ"
 
 #. Theme Name of the plugin/theme
 #. Author of the plugin/theme
-msgid "bootScore"
-msgstr "bootScore"
+msgid "rosegarden"
+msgstr "rosegarden"
 
 #. Theme URI of the plugin/theme
-msgid "https://bootscore.me/"
-msgstr "https://bootscore.me/"
+msgid "https://rosegarden.me/"
+msgstr "https://rosegarden.me/"
 
 #. Description of the plugin/theme
 msgid ""
 "A powerful Bootstrap 5 WordPress Starter Theme with WooCommerce Support. <a "
-"href=\"https://bootscore.me/category/documentation/\" target=\"_blank"
+"href=\"https://rosegarden.me/category/documentation/\" target=\"_blank"
 "\">Documentation</a>. This theme gives you full control whatever you do and "
 "the full freedom to design whatever you want. It comes with a wide selection "
 "of category, page, post, author and archive templates as well as sidebar, "
@@ -988,7 +988,7 @@ msgid ""
 "PHP and JS Skills are required to customize it."
 msgstr ""
 "Мощная стартовая тема WordPress Bootstrap 5 с поддержкой WooCommerce. <a href="
-"\"https://bootscore.me/category/documentation/\" target=\"_blank"
+"\"https://rosegarden.me/category/documentation/\" target=\"_blank"
 "\">Документация</a>. Эта тема дает вам полный контроль над тем, что вы "
 "делаете, и полную свободу создавать все, что вы хотите. Она поставляется с "
 "широким выбором шаблонов категорий, страниц, постов, авторов и архивов, а "
@@ -997,5 +997,5 @@ msgstr ""
 "Для его настройки требуются некоторые навыки работы с CSS, HTML, PHP и JS."
 
 #. Author URI of the plugin/theme
-msgid "https://bootscore.me"
-msgstr "https://bootscore.me"
+msgid "https://rosegarden.me"
+msgstr "https://rosegarden.me"

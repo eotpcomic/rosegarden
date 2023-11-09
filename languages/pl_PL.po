@@ -49,7 +49,7 @@ msgstr "Błąd 404"
 #. Description of the theme
 msgid ""
 "A powerful Bootstrap 5 WordPress Starter Theme with WooCommerce Support. <a "
-"href=\"https://bootscore.me/category/documentation/\">Documentation</a>. "
+"href=\"https://rosegarden.me/category/documentation/\">Documentation</a>. "
 "This theme gives you full control whatever you do and the full freedom to "
 "design whatever you want. It comes with a wide selection of category, page, "
 "post, author and archive templates as well as sidebar, header, footer and "
@@ -58,14 +58,14 @@ msgid ""
 "required to customize it."
 msgstr ""
 "Bootstrap Starter Onepage lub Multi-page szablon ze wsparciem WooCommerce. "
-"Tu znajdziesz przykłady https://bootscore.me/#examples i dokumentację https:"
-"//bootscore.me/category/documentation/. Ten szablon da Ci pełną kontrolę i "
+"Tu znajdziesz przykłady https://rosegarden.me/#examples i dokumentację https:"
+"//rosegarden.me/category/documentation/. Ten szablon da Ci pełną kontrolę i "
 "mnóstwo opcji tworzenia stron. Zawiera przydatne skrypty w nagłówku i "
 "szeroki wybór szablonów dla np. stron, postów, kategorii, autorów i archiwów,"
 " a także paska bocznego, nagłówka, stopki i widżetów 404. Szablon zawiera "
 "preloader, a ważne ustawienia mogą być zmienione w kodzie. Podstawowa "
 "znajomość CSS, HTML, PHP i JS jest wymagana aby w pełni wykorzystać "
-"możliwości szablonu bootScore."
+"możliwości szablonu rosegarden."
 
 #: languages/plugin-translations.php:7
 msgid "Accept"
@@ -98,8 +98,8 @@ msgid "Blank without container"
 msgstr "Puste bez kontenera"
 
 #. Name of the theme
-msgid "bootScore 5"
-msgstr "bootScore 5"
+msgid "rosegarden 5"
+msgstr "rosegarden 5"
 
 #: comments.php:100
 msgid "Cancel"
@@ -210,8 +210,8 @@ msgstr ""
 "do faktury oraz hasło i szczegóły konta."
 
 #. URI of the theme
-msgid "https://bootscore.me/"
-msgstr "https://bootscore.me/"
+msgid "https://rosegarden.me/"
+msgstr "https://rosegarden.me/"
 
 #. Author URI of the theme
 msgid "https://crftwrk.de"

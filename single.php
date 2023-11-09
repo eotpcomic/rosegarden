@@ -10,7 +10,7 @@ $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
       <main id="main" class="site-main">
 
         <?php the_post(); ?>
-        <div class="<?= bootscore_container_class(); ?> pb-5">
+        <div class="<?= rosegarden_container_class(); ?> pb-5">
 
           <!-- Hook to add something nice -->
           <?php bs_after_primary(); ?>
@@ -18,15 +18,15 @@ $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
           <?php the_breadcrumb(); ?>
 
           <div class="row">
-            <div class="<?= bootscore_main_col_class(); ?>">
+            <div class="<?= rosegarden_main_col_class(); ?>">
 
               <header class="entry-header featured-full-width-img bg-dark text-light mb-3" style="background-image: url('<?= $thumb['0']; ?>'); height: 350px">
-                <div class="<?= bootscore_container_class(); ?> entry-header h-100 d-flex align-items-end pb-3">
+                <div class="<?= rosegarden_container_class(); ?> entry-header h-100 d-flex align-items-end pb-3">
                   <div>
                     <h1 class="text-white"><?php the_title(); ?></h1>
                   <small class="text-white">
                     <?php
-                    bootscore_date();
+                    rosegarden_date();
                     ?>
                   </small>
                   </div>
@@ -38,10 +38,10 @@ $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
 
               <footer class="entry-footer clear-both">
                 <div class="mb-4">
-                  <?php bootscore_tags(); ?>
+                  <?php rosegarden_tags(); ?>
                 </div>
                 <!-- Related posts using bS Swiper plugin -->
-                <?php if (function_exists('bootscore_related_posts')) bootscore_related_posts(); ?>
+                <?php if (function_exists('rosegarden_related_posts')) rosegarden_related_posts(); ?>
                 <nav aria-label="bS page navigation">
                   <ul class="pagination justify-content-center">
                     <li class="page-item">

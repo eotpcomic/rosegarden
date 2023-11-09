@@ -1,6 +1,6 @@
 
 ## RoseGarden
-### Wordpress Theme based on [bootscore](https://bootscore.me/) (Bootstrap 5 + WordPress starter theme)
+### Wordpress Theme based on [rosegarden](https://rosegarden.me/) (Bootstrap 5 + WordPress starter theme)
 
 
 RoseGarden combines the Underscores theme boiler template with Bootstrap 5 in a small starter theme for great WordPress projects. There are no settings in the customizer, no logo-uploader and no drag'n'drop. RoseGarden is 100% customizable by using the .php, .scss and .js files. Basic coding skills for editing are required.
@@ -16,7 +16,7 @@ RoseGarden combines the Underscores theme boiler template with Bootstrap 5 in a 
 
 ## License & Credits
 
-- bootScore, MIT License https://github.com/bootscore/bootscore/blob/main/LICENSE
+- rosegarden, MIT License https://github.com/rosegarden/rosegarden/blob/main/LICENSE
 - Bootstrap, MIT License https://github.com/twbs/bootstrap/blob/main/LICENSE
 - Bootstrap 5 WordPress Navbar Walker by AlexWebLab, MIT License https://github.com/AlexWebLab/bootstrap-5-wordpress-navbar-walker/blob/main/LICENSE
 - Font Awesome Free License https://fontawesome.com/license/free

@@ -49,7 +49,7 @@ msgstr "Stránka 404"
 #. Description of the theme
 msgid ""
 "A powerful Bootstrap 5 WordPress Starter Theme with WooCommerce Support. <a "
-"href=\"https://bootscore.me/category/documentation/\">Documentation</a>. "
+"href=\"https://rosegarden.me/category/documentation/\">Documentation</a>. "
 "This theme gives you full control whatever you do and the full freedom to "
 "design whatever you want. It comes with a wide selection of category, page, "
 "post, author and archive templates as well as sidebar, header, footer and "
@@ -58,7 +58,7 @@ msgid ""
 "required to customize it."
 msgstr ""
 "Výkonná výchozí šablona pro Wordpress, založená na Bootstrapu 5 a s podporou "
-"Woocommerce. <a href=\"https://bootscore.me/category/documentation/"
+"Woocommerce. <a href=\"https://rosegarden.me/category/documentation/"
 "\">Documentace</a> (v angličtině). Díky této šabloně máte plnou kontrolu nad "
 "tím, co děláte, a naprostou svobodu upravovat vzhled, jak chcete. Má velký "
 "výběr šablon pro kategorie, stránky, příspěvky, autory a archivy, stejně "
@@ -97,8 +97,8 @@ msgid "Blank without container"
 msgstr "Prázdná bez kontejneru"
 
 #. Name of the theme
-msgid "bootScore 5"
-msgstr "bootScore 5"
+msgid "rosegarden 5"
+msgstr "rosegarden 5"
 
 #: comments.php:100
 msgid "Cancel"
@@ -207,8 +207,8 @@ msgstr ""
 "a&nbsp;posrobnosti účtu."
 
 #. URI of the theme
-msgid "https://bootscore.me/"
-msgstr "https://bootscore.me/"
+msgid "https://rosegarden.me/"
+msgstr "https://rosegarden.me/"
 
 #. Author URI of the theme
 msgid "https://crftwrk.de"

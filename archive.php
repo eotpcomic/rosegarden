@@ -3,13 +3,13 @@
 get_header();
 ?>
 
-  <div id="content" class="site-content <?= bootscore_container_class(); ?> py-5 mt-5">
+  <div id="content" class="site-content <?= rosegarden_container_class(); ?> py-5 mt-5">
     <div id="primary" class="content-area">
 
       <?php bs_after_primary(); ?>
 
       <div class="row">
-        <div class="<?= bootscore_main_col_class(); ?>">
+        <div class="<?= rosegarden_main_col_class(); ?>">
 
           <main id="main" class="site-main">
 
@@ -35,7 +35,7 @@ get_header();
                     <div class="col">
                       <div class="card-body">
 
-                        <?php bootscore_category_badge(); ?>
+                        <?php rosegarden_category_badge(); ?>
 
                         <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
                           <?php the_title('<h2 class="blog-post-title h5">', '</h2>'); ?>
@@ -44,10 +44,10 @@ get_header();
                         <?php if ('post' === get_post_type()) : ?>
                           <p class="meta small mb-2 text-body-tertiary">
                             <?php
-                            bootscore_date();
-                            bootscore_author();
-                            bootscore_comments();
-                            bootscore_edit();
+                            rosegarden_date();
+                            rosegarden_author();
+                            rosegarden_comments();
+                            rosegarden_edit();
                             ?>
                           </p>
                         <?php endif; ?>
@@ -60,11 +60,11 @@ get_header();
 
                         <p class="card-text">
                           <a class="read-more" href="<?php the_permalink(); ?>">
-                            <?php _e('Read more »', 'bootscore'); ?>
+                            <?php _e('Read more »', 'rosegarden'); ?>
                           </a>
                         </p>
 
-                        <?php bootscore_tags(); ?>
+                        <?php rosegarden_tags(); ?>
 
                       </div>
                     </div>
@@ -75,7 +75,7 @@ get_header();
             <?php endif; ?>
 
             <footer class="entry-footer">
-              <?php bootscore_pagination(); ?>
+              <?php rosegarden_pagination(); ?>
             </footer>
 
           </main>

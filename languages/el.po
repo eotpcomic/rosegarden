@@ -55,7 +55,7 @@ msgstr "Σελίδα 404"
 #. Description of the theme
 msgid ""
 "A powerful Bootstrap 5 WordPress Starter Theme with WooCommerce Support. <a "
-"href=\"https://bootscore.me/category/documentation/\">Documentation</a>. "
+"href=\"https://rosegarden.me/category/documentation/\">Documentation</a>. "
 "This theme gives you full control whatever you do and the full freedom to "
 "design whatever you want. It comes with a wide selection of category, page, "
 "post, author and archive templates as well as sidebar, header, footer and "
@@ -64,7 +64,7 @@ msgid ""
 "required to customize it."
 msgstr ""
 "Ενα δυνατό Bootstrap 5 Wordpress Starter Theme με υποστήριξη για WooCommerce."
-" <a href=\"https://bootscore.me/category/documentation/\">Documentation</a>. "
+" <a href=\"https://rosegarden.me/category/documentation/\">Documentation</a>. "
 "Αυτό το theme σας δίνει πλήρη έλεγχο ότι και να κάνετε και πλήρη ελευθερία "
 "για να σχεδιάσετε οτι θέλετε. Έρχεται με μια μεγάλη γκάμα απο template για "
 "κατηγορίες, σελίδες, αναρτήσεις, συντάκτες και για αρχείο καθώς και widget "
@@ -117,8 +117,8 @@ msgstr "Κενό χωρίς container"
 
 # Common WordPress theme terms are left in the default language as they are global standards and any translation of these words could lead to confusion as to what they refer to.
 #. Name of the theme
-msgid "bootScore"
-msgstr "bootScore"
+msgid "rosegarden"
+msgstr "rosegarden"
 
 # Common WordPress theme terms are left in the default language as they are global standards and any translation of these words could lead to confusion as to what they refer to.
 #: comments.php:100
@@ -230,8 +230,8 @@ msgstr ""
 
 # Common WordPress theme terms are left in the default language as they are global standards and any translation of these words could lead to confusion as to what they refer to.
 #. URI of the theme
-msgid "https://bootscore.me/"
-msgstr "https://bootscore.me/"
+msgid "https://rosegarden.me/"
+msgstr "https://rosegarden.me/"
 
 # Common WordPress theme terms are left in the default language as they are global standards and any translation of these words could lead to confusion as to what they refer to.
 #. Author URI of the theme
