@@ -4,14 +4,26 @@ Author: RoseGarden
 Description: Base on rosegarden
 Requires at least: 5.0
 Tags: featured-images, threaded-comments, translation-ready
-
-RoseGarden is based on rosegarden https://rosegarden.me/, (C) 2012-2022 Automattic, Inc.
-rosegarden is distributed under the terms of the MIT-LICENSE.
 */
-
-
+body {
+  background-color: #efefef;
+}
+.content-section { position: relative; bottom: 60px; }
+.content-block { padding: 80px; }
   
-  
+.rosegarden-site-image {
+  position: relative;
+}
+
+.rosegarden-image-block {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+} 
+
 .rosegarden-footer {
   margin-top: 80px;
   padding: 48px clamp(16px,5.55vw,80px);
@@ -31,31 +43,26 @@ rosegarden is distributed under the terms of the MIT-LICENSE.
   margin-bottom: 1em;
 }
 
-.intro-link {
-  padding-top: 150px;
-  color: white;
-  text-decoration: none;
-}
-.intro-link a:not(){
-  color: white;
-  text-decoration: none;
-}
+
 .nav-search-box {
   width: 250px;
 }
-.card-photo {
-  background-size: cover;
-  height: 350px;
-  background-position: center;
-  transition: transform .2s;
-}
 
-.main-navigation {
-  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
-}
+
+
 
 .blog-card-body {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
 }
+
+
+.navbar-brand {
+  font-size: 1.75rem;
+  letter-spacing: 3px;
+}
+
+
+
+

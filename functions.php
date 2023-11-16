@@ -49,14 +49,17 @@ if (defined('JETPACK__VERSION')) {
   require get_template_directory() . '/inc/jetpack.php';
 }
 
-function themename_custom_header_setup() {
-	$args = array(
-    'flex-width'    => true,
-    'width'         => 1200,
-    'flex-height'   => true,
-    'height'        => 350,
-    'default-image' => get_template_directory_uri() . '/img/default-image.jpg',
-  );
-	add_theme_support( 'custom-header', $args );
+function kb_load_scripts() {
+  wp_enqueue_script('jquery');
+
+  wp_register_script( 'kb_load_more', get_stylesheet_directory_uri() . '/loadmore.js', array('jquery') );
+
+  wp_localize_script('kb_load_more', 'kb_string', array(
+    'ajaxurl' => admin_url('admin-ajax.php'),
+    'buttontxt' => __('Load more','kb-theme'),
+    'buttonload' => __('Loading ...','kb-theme'),
+  ));
+
+  wp_enqueue_script( 'kb_load_more' );
 }
-add_action( 'after_setup_theme', 'themename_custom_header_setup' );
+add_action( 'wp_enqueue_scripts', 'kb_load_scripts' );

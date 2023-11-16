@@ -3,7 +3,11 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-
+if ( ! is_admin() && isset($_SERVER['REQUEST_URI'])){
+  if(preg_match('/(wp-comments-post)/', $_SERVER['REQUEST_URI']) === 0 && !empty($_REQUEST['author']) ) {
+  wp_die('Du hast keine Rechte diese Adresse aufzurufen');
+  }
+ }
 /**
  * Setup theme
  */
@@ -47,19 +51,46 @@ if (!function_exists('rosegarden_setup')) :
     // delete the next line if you do not need additional image sizes
     add_image_size( 'category-thumb', 1200, 350 ); // 300 pixels wide (and unlimited height)
 
-    /*
-     * Switch default core markup for search form, comment form, and comments
-     * to output valid HTML5.
-    */
-    add_theme_support('html5', array(
-      'comment-form',
-      'comment-list',
-      'gallery',
-      'caption',
-    ));
+
+    add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 
     // Add theme support for selective refresh for widgets.
     add_theme_support('customize-selective-refresh-widgets');
+
+
+    add_theme_support( 'custom-background', array(
+      'default-color' => 'ededed',
+    ));
+
+
+
+    $args = array(
+      'flex-width'    => true,
+      'width'         => 1200,
+      'flex-height'   => true,
+      'height'        => 350,
+      'default-image' => get_template_directory_uri() . '/img/default-image.jpg',
+    );
+    add_theme_support( 'custom-header', $args );
+
+    add_theme_support( 'title-tag' );
+    add_theme_support( 'custom-logo', array(
+        'height' => 100,
+        'width'  => 300,
+        'flex-width'           => true,
+        'flex-height'          => true,
+        'unlink-homepage-logo' => true,
+    ) );
+
+    add_theme_support( 'align-wide' );
+
+    add_theme_support( 'wp-block-styles' );
+
+    add_theme_support( 'editor-styles' );
+
+    add_filter( 'rss_widget_feed_link', '__return_empty_string' );
+    add_theme_support( 'custom-spacing' );
+    add_theme_support( 'responsive-embeds' );
   }
 endif;
 add_action('after_setup_theme', 'rosegarden_setup');
@@ -76,14 +107,48 @@ function rosegarden_content_width() {
   // This variable is intended to be overruled from themes.
   // Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
   // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-  $GLOBALS['content_width'] = apply_filters('rosegarden_content_width', 720);
+  $GLOBALS['content_width'] = apply_filters('rosegarden_content_width', 740);
 }
 
 add_action('after_setup_theme', 'rosegarden_content_width', 0);
 
-add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 
-$args = array(
-	'default-color' => 'ffffff',
-);
-add_theme_support( 'custom-background', $args );
+add_action( 'init', function () {
+  $post_type_object = get_post_type_object('post');
+  $post_type_object->template = array(
+     array('core/paragraph', array(
+        'placeholder' => 'Das ist der einleitende Text.'
+     )),
+     array('core/heading', array(
+        'placeholder' => 'Das ist die erste Unterüberschrift (h2).',
+        'level' => 2,
+     )),
+  );
+});
+
+function kb_remove_comment_author_class( $classes ) {
+  foreach( $classes as $key => $class ) {
+   if(strstr($class, "comment-author-")) {
+    unset( $classes[$key] );
+   }
+  }
+  return $classes;
+ }
+ add_filter( 'comment_class' , 'kb_remove_comment_author_class' );
+
+ add_filter('jpeg_quality', function($arg){return 100;});
+add_filter( 'wp_editor_set_quality', function($arg){return 100;} );
+
+
+// Mindestanzahl an Wörtern je Beitrag 
+function minWordsPerPost($content){
+	global $post;
+                $num = 100; // Anzahl Wörter festlegen
+		$content = $post->post_content;
+	if (str_word_count($content) <  $num)
+	        wp_die( __('Fehler: Dein Beitrag muss mindestens 100 Wörter umfassen.') );
+}
+
+add_action('publish_post', 'minWordsPerPost');
+
+

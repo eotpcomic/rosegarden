@@ -1,7 +1,7 @@
 <footer>
 
   <div class="rosegarden-footer bg-body-tertiary pt-5 pb-5 bg-light ">
-    <div class="<?= rosegarden_container_class(); ?>">
+    <div class="container">
 
       <!-- Top Footer Widget -->
       <?php if (is_active_sidebar('top-footer')) : ?>
@@ -57,7 +57,7 @@
   </div>
 
   <div class="rosegarden-info bg-body-tertiary text-body-tertiary border-top py-2 text-center">
-    <div class="<?= rosegarden_container_class(); ?>">
+    <div class="container">
       <?php if (is_active_sidebar('footer-info')) : ?>
         <?php dynamic_sidebar('footer-info'); ?>
       <?php endif; ?>

@@ -228,7 +228,7 @@ if (!function_exists('rosegarden_post_thumbnail')) :
       ?>
 
       <div class="post-thumbnail">
-        <?php the_post_thumbnail('full', array('class' => 'rounded mb-3')); ?>
+        <?php the_post_thumbnail('full'); ?>
       </div><!-- .post-thumbnail -->
 
     <?php else : ?>
@@ -238,6 +238,7 @@ if (!function_exists('rosegarden_post_thumbnail')) :
         the_post_thumbnail('post-thumbnail', array(
           'alt' => the_title_attribute(array(
             'echo' => false,
+            'class' => 'card-img-top'
           )),
         ));
         ?>

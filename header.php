@@ -15,14 +15,17 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
   <?php wp_head(); ?>
+
+  
 </head>
 
-<body <?php body_class(); ?>>
+<body class="home page-template-default logged-in admin-bar no-customize-support custom-background blog  wpa-excerpt hfeed">
 
 <?php wp_body_open(); ?>
 
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm bg-light" id="mainNav">
+  
   <div class="container px-4">
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -32,7 +35,7 @@
           'container'      => false,
           'menu_class'     => '',
           'fallback_cb'    => '__return_false',
-          'items_wrap'     => '<ul class="navbar-nav me-auto  %2$s">%3$s</ul>',
+          'items_wrap'     => '<ul class="navbar-nav me-auto fw-bold  %2$s">%3$s</ul>',
           'depth'          => 2,
           'walker'         => new bootstrap_5_wp_nav_menu_walker()
         ));  ?>
@@ -45,24 +48,30 @@
     </div>
   </div>
 </nav>
+
 <!-- Header-->
-<header class="bg-primary bg-gradient text-white">
-  <section>
-    <div id="intro" class="bg-image" style="
+<header class="banner-image w-100 d-flex justify-content-center align-items-center page-header" style="
         background-image: url('<?php header_image(); ?>');
-        height: 350px;
         background-size: cover;
         background-repeat: no-repeat;
-      ">
-      <div class="intro-link px-4" >
-        <a href="<?= esc_url(home_url('/')); ?>"  class="text-decoration-none">
-              <h1 class="text-white text-center"><?php bloginfo('name'); ?></h1>
-              <p class="lead text-white text-center "><?php bloginfo('description'); ?></p>
-          </a>
+        height: 400px;
+        position: relative;
+      " id="masthead" role="banner">
+  <a class="skip-link screen-reader-text" href="#content">Zum Inhalt springen</a>
+  <div class="container">
+      <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <div class="page-caption">
+              <a href="<?= esc_url(home_url('/')); ?>"  class="text-decoration-none">
+      <h1 class="text-white text-center"><?php bloginfo('name'); ?></h1>
+      <p class="h3 text-white text-center "><?php bloginfo('description'); ?></p>
+    </a>
+              </div>
+          </div>
       </div>
-    </div>
-  </section>
+  </div>
 </header>
+
 
 
  

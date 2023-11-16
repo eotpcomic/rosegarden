@@ -2,69 +2,43 @@
 get_header();
 
 $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+the_post(); 
 ?>
 
-  <div id="content" class="site-content">
-    <div id="primary" class="content-area">
-
-      <main id="main" class="site-main">
-
-        <?php the_post(); ?>
-        <div class="<?= rosegarden_container_class(); ?> pb-5">
-
-          <!-- Hook to add something nice -->
-          <?php bs_after_primary(); ?>
-
-          <?php the_breadcrumb(); ?>
-
-          <div class="row">
-            <div class="<?= rosegarden_main_col_class(); ?>">
-
-              <header class="entry-header featured-full-width-img bg-dark text-light mb-3" style="background-image: url('<?= $thumb['0']; ?>'); height: 350px">
-                <div class="<?= rosegarden_container_class(); ?> entry-header h-100 d-flex align-items-end pb-3">
-                  <div>
-                    <h1 class="text-white"><?php the_title(); ?></h1>
-                  <small class="text-white">
-                    <?php
-                    rosegarden_date();
-                    ?>
-                  </small>
-                  </div>
-                </div>
-              </header>
-              <div class="entry-content">
-                <?php the_content(); ?>
-              </div>
-
-              <footer class="entry-footer clear-both">
-                <div class="mb-4">
-                  <?php rosegarden_tags(); ?>
-                </div>
-                <!-- Related posts using bS Swiper plugin -->
-                <?php if (function_exists('rosegarden_related_posts')) rosegarden_related_posts(); ?>
-                <nav aria-label="bS page navigation">
-                  <ul class="pagination justify-content-center">
-                    <li class="page-item">
-                      <?php previous_post_link('%link'); ?>
-                    </li>
-                    <li class="page-item">
-                      <?php next_post_link('%link'); ?>
-                    </li>
-                  </ul>
-                </nav>
-                <?php comments_template(); ?>
-              </footer>
-
+<div class="content-section">
+  <div class="container">
+    <div class="content-block bg-white">
+      <div class="row">
+        <div class="col">
+        <?php the_breadcrumb(); if(has_post_thumbnail() ) : ?>
+          
+          <div class="rosegarden-site-image">
+            <img src="<?php echo get_the_post_thumbnail_url( ); ?>" alt="image" style="width:100%;">
+            <div class="rosegarden-image-block">
+              <?php the_title('<h2 class="blog-post-title">', '</h2>'); ?>
+              <small class="meta small mb-2 text-body-tertiary ">
+                <?php rosegarden_date(); rosegarden_author(); ?>
+              </small>
             </div>
-            <?php get_sidebar(); ?>
-          </div>
+          </div> 
+          <?php else : ?>
+            <?php the_title('<h2 class="blog-post-title">', '</h2>'); ?>
+            <small class="meta small mb-2 text-body-tertiary ">
+              <?php rosegarden_date(); rosegarden_author(); ?>
+            </small>
+          <?php endif; ?>
+          </div> 
+            
+            <p><?php the_content(); ?></p>
 
+            <footer class="pt-5">
+                <?php comments_template(); ?>
+            </footer>
         </div>
-
-      </main>
-
+      </div>
     </div>
   </div>
+</div>
 
 <?php
 get_footer();
