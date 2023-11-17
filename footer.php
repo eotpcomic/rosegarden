@@ -27,15 +27,15 @@
 
         <!-- Footer 3 Widget -->
         <div class="col-md-6 col-lg-3">
-          <?php if (is_active_sidebar('footer-3')) : ?>
-            <?php dynamic_sidebar('footer-3'); ?>
+          <?php if (is_active_sidebar('footer-4')) : ?>
+            <?php dynamic_sidebar('footer-4'); ?>
           <?php endif; ?>
         </div>
 
         <!-- Footer 4 Widget -->
         <div class="col-md-6 col-lg-3">
-          <?php if (is_active_sidebar('footer-4')) : ?>
-            <?php dynamic_sidebar('footer-4'); ?>
+          <?php if (is_active_sidebar('footer-3')) : ?>
+            <?php dynamic_sidebar('footer-3'); ?>
           <?php endif; ?>
         </div>
 
@@ -55,17 +55,8 @@
       ?>
 
     </div>
-  </div>
 
-  <div class="rosegarden-info bg-body-tertiary text-body-tertiary border-top py-2 text-center">
-    <div class="container">
-      <?php if (is_active_sidebar('footer-info')) : ?>
-        <?php dynamic_sidebar('footer-info'); ?>
-      <?php endif; ?>
-      <small class="rosegarden-copyright"><span class="cr-symbol">&copy;</span>&nbsp;<?= date('Y'); ?> <?php bloginfo('name'); ?></small>
-    </div>
   </div>
-
 </footer>
 
 <?php wp_footer(); ?>
