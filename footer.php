@@ -1,3 +1,4 @@
+  
 <footer>
 
   <div class="rosegarden-footer bg-body-tertiary pt-5 pb-5 bg-light ">

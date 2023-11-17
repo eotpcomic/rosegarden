@@ -58,11 +58,6 @@ if (!function_exists('rosegarden_setup')) :
     add_theme_support('customize-selective-refresh-widgets');
 
 
-    add_theme_support( 'custom-background', array(
-      'default-color' => 'ededed',
-    ));
-
-
 
     $args = array(
       'flex-width'    => true,

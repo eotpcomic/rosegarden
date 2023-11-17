@@ -10,68 +10,51 @@
 
 get_header();
 ?>
-  <div id="content" class="site-content container py-5 mt-5">
-    <div id="primary" class="content-area">
 
-      <!-- Hook to add something nice -->
-      <?php bs_after_primary(); ?>
-
+<div class="content-section">
+  <div class="container">
+    <div class="content-block bg-white shadow-sm">
       <div class="row">
-        <div class="<?= rosegarden_main_col_class(); ?>">
-
-          <main id="main" class="site-main">
-
-            <?php if (have_posts()) : ?>
-
-              <header class="page-header mb-4">
-                <h1>
-                  <?php
-                  /* translators: %s: search query. */
-                  printf(esc_html__('Search Results for: %s', 'rosegarden'), '<span class="text-secondary">' . get_search_query() . '</span>');
-                  ?>
-                </h1>
-              </header>
-
+        <div class="col">
+          <?php if ( have_posts() ) : ?>
+            <header class="page-header mb-4">
+            <h1>
               <?php
-              /* Start the Loop */
-              while (have_posts()) :
-                the_post(); ?>
+              /* translators: %s: search query. */
+              printf(esc_html__('Search Results for: %s', 'rosegarden'), '<span class="text-secondary">' . get_search_query() . '</span>');
+              ?>
+            </h1>
+          </header>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="<?= rosegarden_main_col_class(); ?>">
+                      <div class="row row-cols-1 row-cols-md-3 g-4">
+          <?php 
+              while ( have_posts() ) { the_post();
+                if(is_sticky()) continue;
 
-                <!-- start post <?php the_ID(); ?> -->
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                  <div class="col">
-                    <div class="card mt-5">
-                      <div class="card-body">
-                      <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
-                <?php the_title('<h2 class="blog-post-title">', '</h2>'); ?>
-              </a>
-              <small class="meta small mb-2 text-body-tertiary ">
-                  <?php rosegarden_date(); rosegarden_author(); ?>
-              </small>
-              <p class="card-text mt-4"><?= strip_tags(get_the_excerpt()); ?></p>
-              <a href="<?php the_permalink(); ?>" class="btn btn-light"> <?php _e('Read more »', 'rosegarden'); ?> </a>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <!-- end post <?php the_ID(); ?> -->
+                get_template_part('article-post');
+              }
 
-              <?php endwhile;
+              // Pagination
+              if($wp_query->max_num_pages > 1) {
+                if($wp_query->query_vars["paged"] == 0) {
+                  $current_page = 1;
+                } else {
+                  $current_page = $wp_query->query_vars["paged"];
+                }
+                echo '<div class="pagination" data-query="'.htmlspecialchars(json_encode($wp_query->query_vars)).'" data-maxpages="'.htmlspecialchars(json_encode($wp_query->max_num_pages)).'" data-current="'.$current_page.'">'.paginate_links(array('total' => $wp_query->max_num_pages)).'</div>';
+              }
+            endif; 
+          ?>
+ </div>
+            </div>
+            <?php get_sidebar(); ?>
+          </div>
+              </div><!-- row -->
+        </main><!-- #main -->
+    </div><!-- #content -->
+  </div> 
+</div>
 
-              rosegarden_pagination();
-             
-
-            else : ?>
-              <p class="alert alert-info mb-4"><?php esc_html_e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'rosegarden'); ?></p>
-            <?php  endif; ?>
-
-          </main><!-- #main -->
-
-        </div><!-- col -->
-        <?php get_sidebar(); ?>
-      </div><!-- row -->
-
-    </div><!-- #primary -->
-  </div><!-- #content -->
 <?php
 get_footer();

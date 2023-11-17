@@ -3,89 +3,49 @@
 get_header();
 ?>
 
-  <div id="content" class="site-content container py-5 mt-5">
-    <div id="primary" class="content-area">
+<div class="content-section">
+  <div class="container">
+    <div id="content" class="content-block bg-white" >
+      
+        <main id="main" class="site-main">
 
-      <?php bs_after_primary(); ?>
-
-      <div class="row">
-        <div class="<?= rosegarden_main_col_class(); ?>">
-
-          <main id="main" class="site-main">
-
-            <header class="page-header mb-4">
+        <header class="page-header mb-4">
               <?php the_archive_title('<h1>', '</h1>'); ?>
               <?php the_archive_description('<div class="archive-description">', '</div>'); ?>
             </header>
+        <!-- Post List -->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="<?= rosegarden_main_col_class(); ?>">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <?php
+                // Standard-Loop
+                if ( have_posts() ) {
+                  while ( have_posts() ) { the_post();
+                    if(is_sticky()) continue;
 
-            <?php if (have_posts()) : ?>
-              <?php while (have_posts()) : the_post(); ?>
+                    get_template_part('article-post');
+                  }
 
-                <div class="card horizontal mb-4">
-                  <div class="row g-0">
-
-                    <?php if (has_post_thumbnail()) : ?>
-                      <div class="col-lg-6 col-xl-5 col-xxl-4">
-                        <a href="<?php the_permalink(); ?>">
-                          <?php the_post_thumbnail('medium', array('class' => 'card-img-lg-start')); ?>
-                        </a>
-                      </div>
-                    <?php endif; ?>
-
-                    <div class="col">
-                      <div class="card-body">
-
-                        <?php rosegarden_category_badge(); ?>
-
-                        <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
-                          <?php the_title('<h2 class="blog-post-title h5">', '</h2>'); ?>
-                        </a>
-
-                        <?php if ('post' === get_post_type()) : ?>
-                          <p class="meta small mb-2 text-body-tertiary">
-                            <?php
-                            rosegarden_date();
-                            rosegarden_author();
-                            rosegarden_comments();
-                            rosegarden_edit();
-                            ?>
-                          </p>
-                        <?php endif; ?>
-
-                        <p class="card-text">
-                          <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
-                            <?= strip_tags(get_the_excerpt()); ?>
-                          </a>
-                        </p>
-
-                        <p class="card-text">
-                          <a class="read-more" href="<?php the_permalink(); ?>">
-                            <?php _e('Read more »', 'rosegarden'); ?>
-                          </a>
-                        </p>
-
-                        <?php rosegarden_tags(); ?>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              <?php endwhile; ?>
-            <?php endif; ?>
-
-            <footer class="entry-footer">
-              <?php rosegarden_pagination(); ?>
-            </footer>
-
-          </main>
-
-        </div>
-        <?php get_sidebar(); ?>
-      </div>
-
-    </div>
-  </div>
+                  // Pagination
+                  if($wp_query->max_num_pages > 1) {
+                    if($wp_query->query_vars["paged"] == 0) {
+                      $current_page = 1;
+                    } else {
+                      $current_page = $wp_query->query_vars["paged"];
+                    }
+                    echo '<div class="pagination" data-query="'.htmlspecialchars(json_encode($wp_query->query_vars)).'" data-maxpages="'.htmlspecialchars(json_encode($wp_query->max_num_pages)).'" data-current="'.$current_page.'">'.paginate_links(array('total' => $wp_query->max_num_pages)).'</div>';
+                  }
+                }
+                ?>
+              </div>
+            </div>
+            <?php get_sidebar(); ?>
+          </div>
+              </div><!-- row -->
+        </main><!-- #main -->
+    </div><!-- #content -->
+  </div> 
+</div>
 
 <?php
 get_footer();

@@ -9,10 +9,11 @@ body {
   background-color: #efefef;
 }
 .content-section { position: relative; bottom: 60px; }
-.content-block { padding: 80px; }
+.content-block { padding: 40px; }
   
 .rosegarden-site-image {
   position: relative;
+  
 }
 
 .rosegarden-image-block {
@@ -47,22 +48,22 @@ body {
 .nav-search-box {
   width: 250px;
 }
-
-
-
-
 .blog-card-body {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
 }
-
-
 .navbar-brand {
   font-size: 1.75rem;
   letter-spacing: 3px;
 }
+div.wpforms-container-full * {
+  width: 100vh;
+}
 
-
-
-
+.post-img-overlay {
+  position: absolute;
+  top: 0;
+  padding: var(--bs-card-img-overlay-padding);
+  border-radius: var(--bs-card-inner-border-radius);
+}

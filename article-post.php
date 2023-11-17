@@ -5,7 +5,7 @@
       <?php if(has_post_thumbnail() ) : ?>
         <div class="bg-dark text-white" >
           <img src="<?php echo get_the_post_thumbnail_url( ); ?>" width="100%" height="150" >
-          <div class="card-img-overlay">
+          <div class="post-img-overlay">
             <a class="text-decoration-none" href="<?php the_permalink(); ?>">
                 <?php the_title('<h2 class="blog-post-title">', '</h2>'); ?>
             </a>
@@ -16,7 +16,7 @@
         </div> 
         <div class="card-body">
           <p class="card-text"><?= strip_tags(get_the_excerpt()); ?></p>
-          <a href="<?php the_permalink(); ?>" class="btn btn-light"> 
+          <a href="<?php the_permalink(); ?>" class="btn btn-light mt-3"> 
               <?php _e('Read more »', 'rosegarden'); ?> 
           </a>
         </div> 

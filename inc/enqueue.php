@@ -16,8 +16,9 @@ function rosegarden_scripts() {
 
   $modificated_styleCss       = date('YmdHi', filemtime(get_stylesheet_directory() . '/style.css'));
   $modificated_fontawesomeCss = date('YmdHi', filemtime(get_template_directory() . '/fontawesome/css/all.min.css'));
-  $modificated_bootstrapJs    = date('YmdHi', filemtime(get_template_directory() . '/js/bootstrap.bundle.min.js'));
+  $modificated_bootstrapJs    = date('YmdHi', filemtime(get_template_directory() . '/js/bootstrap.min.js'));
   $modificated_themeJs        = date('YmdHi', filemtime(get_template_directory() . '/js/theme.js'));
+
 
 
   wp_enqueue_style('main', get_template_directory_uri() . '/css/bootstrap.min.css', array(), $modificated_rosegardenCss);
@@ -32,7 +33,15 @@ function rosegarden_scripts() {
   wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), $modificated_bootstrapJs, true);
 
   // Theme JS
+  wp_localize_script('kb_load_more', 'kb_string', array(
+    'ajaxurl' => admin_url('admin-ajax.php'),
+    'buttontxt' => __('Load more','kb-theme'),
+    'buttonload' => __('Loading ...','kb-theme'),
+  ));
   wp_enqueue_script('rosegarden-script', get_template_directory_uri() . '/js/theme.js', array('jquery'), $modificated_themeJs, true);
+
+    // jquery JS
+    wp_enqueue_script('jquery', get_template_directory_uri() . '/js/theme.js', array(), $modificated_jquery, true);
 
 
   if (is_singular() && comments_open() && get_option('thread_comments')) {

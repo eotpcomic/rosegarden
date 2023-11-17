@@ -5,25 +5,15 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="profile" href="https://gmpg.org/xfn/11">
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="<?= get_stylesheet_directory_uri(); ?>/img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="<?= get_stylesheet_directory_uri(); ?>/img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="<?= get_stylesheet_directory_uri(); ?>/img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="<?= get_stylesheet_directory_uri(); ?>/img/favicon/site.webmanifest">
-  <link rel="mask-icon" href="<?= get_stylesheet_directory_uri(); ?>/img/favicon/safari-pinned-tab.svg" color="#0d6efd">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
   <?php wp_head(); ?>
-
-  
 </head>
 
-<body class="home page-template-default logged-in admin-bar no-customize-support custom-background blog  wpa-excerpt hfeed">
+<body class="home page-template-default logged-in admin-bar custom-background blog  wpa-excerpt hfeed">
 
 <?php wp_body_open(); ?>
 
 <!-- Navigation-->
+
 <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm bg-light" id="mainNav">
   
   <div class="container px-4">
@@ -48,6 +38,8 @@
     </div>
   </div>
 </nav>
+
+
 
 <!-- Header-->
 <header class="banner-image w-100 d-flex justify-content-center align-items-center page-header" style="
