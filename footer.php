@@ -1,8 +1,6 @@
-  
-<footer>
 
-  <div class="rosegarden-footer bg-body-tertiary pt-5 pb-5 bg-light ">
-    <div class="container">
+  <div class="rosegarden-footer bg-body-tertiary text-white " >
+    <div class="container" >
 
       <!-- Top Footer Widget -->
       <?php if (is_active_sidebar('top-footer')) : ?>
@@ -55,7 +53,6 @@
       ?>
 
     </div>
-
   </div>
 </footer>
 

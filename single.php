@@ -7,7 +7,7 @@ the_post();
 
 <div class="content-section">
   <div class="container">
-    <div class="content-block bg-white shadow-sm">
+    <div class="content-block shadow-sm bg-white">
       <div class="row">
         <div class="col">
         <?php the_breadcrumb(); if(has_post_thumbnail() ) : ?>

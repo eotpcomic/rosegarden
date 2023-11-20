@@ -1,0 +1,246 @@
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #7464a1;
+  --bs-pink: #d63384;
+  --bs-red: #a16468;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #e4c662;
+  --bs-green: #67c29c;
+  --bs-teal: #64a19d;
+  --bs-cyan: #1cabc4;
+  --bs-black: #000;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
+  --bs-primary: #64a19d;
+  --bs-secondary: #7464a1;
+  --bs-success: #67c29c;
+  --bs-info: #1cabc4;
+  --bs-warning: #e4c662;
+  --bs-danger: #a16468;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-black: #000;
+  --bs-white: #fff;
+  --bs-primary-rgb: 100, 161, 157;
+  --bs-secondary-rgb: 116, 100, 161;
+  --bs-success-rgb: 103, 194, 156;
+  --bs-info-rgb: 28, 171, 196;
+  --bs-warning-rgb: 228, 198, 98;
+  --bs-danger-rgb: 161, 100, 104;
+  --bs-light-rgb: 248, 249, 250;
+  --bs-dark-rgb: 33, 37, 41;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-body-color-rgb: 33, 37, 41;
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #212529;
+  --bs-body-bg: #fff;
+  --bs-border-width: 1px;
+  --bs-border-style: solid;
+  --bs-border-color: #dee2e6;
+  --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+  --bs-border-radius: 0.375rem;
+  --bs-border-radius-sm: 0.25rem;
+  --bs-border-radius-lg: 0.5rem;
+  --bs-border-radius-xl: 1rem;
+  --bs-border-radius-2xl: 2rem;
+  --bs-border-radius-pill: 50rem;
+  --bs-link-color: #64a19d;
+  --bs-link-hover-color: #50817e;
+  --bs-code-color: #d63384;
+  --bs-highlight-bg: #faf4e0;
+}
+.card {
+  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-border-width: 0px;
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(0.375rem - 1px);
+  --bs-card-cap-padding-y: 0.5rem;
+  --bs-card-cap-padding-x: 1rem;
+  --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: #fff;
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--bs-card-height);
+  word-wrap: break-word;
+  background-color: var(--bs-card-bg);
+  background-clip: border-box;
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border-radius: var(--bs-card-border-radius);
+}
+
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    right: 0; 
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 1000;
+  }
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  @media (max-width: 767px) {
+    .icon-bar a {
+      padding: 6px 8px;
+      font-size: 16px;
+      opacity: 0.7;
+      display: none; 
+    }
+  }
+  .icon-bar a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    outline: 1px solid white;
+    outline-offset: -1px;
+  }
+  .facebook {
+    background: #303c55;
+  }
+  .mail {
+    background: #dde1e4;
+  }
+  .instagram {
+    background: #8b3e34;
+  }
+
+  body {
+    background-color: #efefef;
+  }
+  .content-section { position: relative; bottom: 60px; }
+  .content-block { 
+    padding: 40px; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.75rem;
+  }
+    
+  .rosegarden-site-image {
+    position: relative;
+    
+  }
+  
+  .rosegarden-image-block {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  } 
+  
+  .rosegarden-footer {
+    margin-top: 80px;
+    padding: 48px clamp(16px,5.55vw,80px);
+    border-bottom: 1px solid #eee;
+  }
+  
+   a:not(.btn) {
+    color: #999;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+  }
+  
+  .entry-title {
+    margin-bottom: 1em;
+  }
+  
+  
+  .nav-search-box {
+    width: 250px;
+  }
+  .blog-card-body {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
+  }
+  .navbar-brand {
+    font-size: 1.75rem;
+    letter-spacing: 3px;
+  }
+  div.wpforms-container-full * {
+    width: 100vh;
+  }
+  
+  .post-img-overlay {
+    position: absolute;
+    top: 0;
+    padding: var(--bs-card-img-overlay-padding);
+    border-radius: var(--bs-card-inner-border-radius);
+  }
+
+  .shadow-blur {
+    box-shadow: inset 0 0px 1px 1px rgba(254, 254, 254, 0.9), 0 20px 27px 0 rgba(0, 0, 0, 0.05) !important;
+  }
+  .blur {
+    box-shadow: inset 0px 0px 2px #fefefed1;
+    -webkit-backdrop-filter: saturate(200%) blur(30px);
+    backdrop-filter: saturate(200%) blur(30px);
+    background-color: rgba(255, 255, 255, 0.8) !important;
+  }
+  
+  .border-radius-lg {
+    border-radius: 0.5rem;
+  }
+  .shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  }
+  .hover img {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .footer_widget h5 {
+    display: block;
+    text-transform:uppercase!important;
+  }
+  .rosegarden-footer {
+    background-color: #3e4551
+  }
+  hr.colored {
+   
+    height: 8px;
+    background: linear-gradient(to left, rgba(196,222,138,1) 0%, rgba(196,222,138,1) 12.5%, rgba(245,253,212,1) 12.5%, rgba(245,253,212,1) 25%, rgba(255,208,132,1) 25%, rgba(255,208,132,1) 37.5%, rgba(242,122,107,1) 37.5%, rgba(242,122,107,1) 50%, rgba(223,157,185,1) 50%, rgba(223,157,185,1) 62.5%, rgba(192,156,221,1) 62.5%, rgba(192,156,221,1) 75%, rgba(95,156,217,1) 75%, rgba(95,156,217,1) 87.5%, rgba(94,190,227,1) 87.5%, rgba(94,190,227,1) 87.5%, rgba(94,190,227,1) 100%); /* W3C */
+}
+  

@@ -2,7 +2,7 @@
 
 <div class="content-section">
   <div class="container">
-    <div id="content" class="content-block bg-white" >
+    <div id="content" class="content-block shadow-sm bg-white" >
       
         <main id="main" class="site-main">
 
@@ -20,7 +20,6 @@
             get_template_part('article-sticky'); 
 
           }
-          echo "<hr>";
         }
         
         wp_reset_postdata(); ?>

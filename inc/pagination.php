@@ -25,7 +25,6 @@ if (!function_exists('rosegarden_pagination')) :
 
     if (1 != $pages) {
       echo '<nav aria-label="Page navigation" role="navigation">';
-      echo '<span class="sr-only">' . esc_html__('Page navigation', 'rosegarden') . '</span>';
       echo '<ul class="pagination justify-content-center mb-4">';
 
       if ($paged > 2 && $paged > $range + 1 && $showitems < $pages) {
@@ -52,8 +51,6 @@ if (!function_exists('rosegarden_pagination')) :
 
       echo '</ul>';
       echo '</nav>';
-      // Uncomment this if you want to show [Page 2 of 30]
-      // echo '<div class="pagination-info mb-5 text-center">[ <span class="text-muted">' . __('Page', 'rosegarden') . '</span> '.$paged.' <span class="text-muted">' . __('of', 'rosegarden') . '</span> '.$pages.' ]</div>';
     }
   }
 

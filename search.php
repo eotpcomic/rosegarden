@@ -28,7 +28,7 @@ get_header();
           <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="<?= rosegarden_main_col_class(); ?>">
                       <div class="row row-cols-1 row-cols-md-3 g-4">
-          <?php 
+              <?php 
               while ( have_posts() ) { the_post();
                 if(is_sticky()) continue;
 
@@ -43,10 +43,22 @@ get_header();
                   $current_page = $wp_query->query_vars["paged"];
                 }
                 echo '<div class="pagination" data-query="'.htmlspecialchars(json_encode($wp_query->query_vars)).'" data-maxpages="'.htmlspecialchars(json_encode($wp_query->max_num_pages)).'" data-current="'.$current_page.'">'.paginate_links(array('total' => $wp_query->max_num_pages)).'</div>';
-              }
-            endif; 
-          ?>
- </div>
+              } ?>
+              <?php else : ?>
+              <header class="page-header mb-4">
+                <h1>
+                  <?php
+                  /* translators: %s: search query. */
+                  printf(esc_html__('Search Results for: %s', 'rosegarden'), '<span class="text-secondary">' . get_search_query() . '</span>');
+                  ?>
+                </h1>
+              </header>
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="<?= rosegarden_main_col_class(); ?>">
+                  <div class="row row-cols-1 row-cols-md-3 g-4">
+                    
+              <?php endif  ?>
+              </div>
             </div>
             <?php get_sidebar(); ?>
           </div>

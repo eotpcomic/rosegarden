@@ -13,9 +13,7 @@ require_once('inc/theme-setup.php');             // Theme setup and custom theme
 require_once('inc/breadcrumb.php');              // Breadcrumb
 require_once('inc/columns.php');                 // Main/sidebar column width and breakpoints
 require_once('inc/comments.php');                // Comments
-require_once('inc/enable-html.php');             // Enable HTML in category and author description
 require_once('inc/enqueue.php');                 // Enqueue scripts and styles
-require_once('inc/excerpt.php');                 // Adds excerpt to pages
 require_once('inc/loop.php');                    // Amount of items in the loop before page gets paginated (set to 24)
 require_once('inc/pagination.php');              // Pagination for loop and single posts
 require_once('inc/password-protected-form.php'); // Form if post or page is protected by password

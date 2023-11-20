@@ -86,7 +86,7 @@ if (!function_exists('rosegarden_author')) :
   function rosegarden_author() {
     $byline = sprintf(
       esc_html_x('by %s', 'post author', 'rosegarden'),
-      '<a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a>'
+      '<a  href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a>'
     );
 
     echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
@@ -208,43 +208,3 @@ if (!function_exists('rosegarden_tags')) :
   }
 endif;
 
-
-/**
- * Featured image
- */
-if (!function_exists('rosegarden_post_thumbnail')) :
-  /**
-   * Displays an optional post thumbnail.
-   *
-   * Wraps the post thumbnail in an anchor element on index views, or a div
-   * element when on single views.
-   */
-  function rosegarden_post_thumbnail() {
-    if (post_password_required() || is_attachment() || !has_post_thumbnail()) {
-      return;
-    }
-
-    if (is_singular()) :
-      ?>
-
-      <div class="post-thumbnail">
-        <?php the_post_thumbnail('full'); ?>
-      </div><!-- .post-thumbnail -->
-
-    <?php else : ?>
-
-      <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-        <?php
-        the_post_thumbnail('post-thumbnail', array(
-          'alt' => the_title_attribute(array(
-            'echo' => false,
-            'class' => 'card-img-top'
-          )),
-        ));
-        ?>
-      </a>
-
-    <?php
-    endif; // End is_singular().
-  }
-endif;

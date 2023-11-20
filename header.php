@@ -1,11 +1,19 @@
 
 <!doctype html >
-<html <?php language_attributes(); ?> class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths">
+<html <?php language_attributes(); ?> >
 
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php wp_head(); ?>
+  <?php if ( is_single() ) { ?>
+    <meta name="description" content="<?php echo wp_strip_all_tags( get_the_excerpt(), true ); ?>" />
+  <?php } ?>
+  <meta property="og:locale" content="<?php echo str_replace( '_', '-', determine_locale() ); ?>" />
+	<meta property="og:title" content="<?php echo get_bloginfo( 'name' ) ?>" />
+	<meta property="og:url" content="<?php echo get_home_url(); ?>" />
+	<meta property="og:site_name" content="<?php echo get_bloginfo( 'blogdescription' ) ?>" /> 
+	
 </head>
 
 <body class="home page-template-default logged-in admin-bar custom-background blog  wpa-excerpt hfeed">
@@ -14,7 +22,7 @@
 
 <!-- Navigation-->
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm bg-light" id="mainNav">
+<nav class="navbar blur navbar-expand-lg navbar-light fixed-top shadow-sm bg-light" id="mainNav">
   
   <div class="container px-4">
 
@@ -42,7 +50,7 @@
 
 
 <!-- Header-->
-<header class="banner-image w-100 d-flex justify-content-center align-items-center page-header" style="
+<header class="banner-image w-100 d-flex justify-content-center align-items-center page-header masthead" style="
         background-image: url('<?php header_image(); ?>');
         background-size: cover;
         background-repeat: no-repeat;
@@ -64,7 +72,18 @@
   </div>
 </header>
 
-
+<div class="icon-bar">
+  <a href="#" target="_blank" class="facebook">
+    <i aria-hidden="true" title="to facebook" class="fab fa-facebook-f"></i>
+  </a>
+  <a href="#" target="_blank" class="instagram">
+    <i aria-hidden="true" title="to instagram" class="fab fa-instagram-square"></i>
+  </a>
+  <a href="?page_id=83" class="mail">
+    <i aria-hidden="true" title="go to slack" class="fab fa-slack"></i> 
+  </a>
+  
+</div>
 
  
     
