@@ -253,7 +253,6 @@ nav {
 }
 nav a:hover {
   background-color: #c2c16771;
-  color: #EEA200;
 }
 .navbar-nav .nav-link.active{
   border-bottom: 2px solid;
